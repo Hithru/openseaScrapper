@@ -1,0 +1,27 @@
+{
+  "name": "openseascrapper",
+  "version": "1.0.0",
+  "description": "Web scrapper to get collection and assest information from opensea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "node demo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hithru/openseaScrapper.git"
+  },
+  "author": "Hithru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hithru/openseaScrapper/issues"
+  },
+  "homepage": "https://github.com/Hithru/openseaScrapper#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fs": "0.0.1-security",
+    "puppeteer": "^10.2.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.8"
+  }
+}
