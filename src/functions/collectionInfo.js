@@ -7,20 +7,19 @@ const axios = require("axios");
 const collectionInfo = async (slug) => {
   const response = await axios.get(`https://api.opensea.io/collection/${slug}`);
   const collectionObj = response.data.collection;
-  console.log("Unedited data");
-  console.log(collectionObj);
+  //   console.log("Unedited data");
+  //   console.log(response);
+  //   console.log(response.data.collection);
   const stats = _getStats(collectionObj);
   return {
+    id: null,
+    category: null,
     name: _getName(collectionObj),
-    symbol: _getSymbol(collectionObj),
-    stats: _getStats(collectionObj),
-    floorPrice: stats ? stats.floorPrice : null,
     description: _getDescription(collectionObj),
-    contractAddress: _getContractAddress(collectionObj),
-    safelistRequestStatus: _getSafelistRequestStatus(collectionObj),
-    verified: _isVerified(collectionObj),
-    banner: _getBannerImageUrl(collectionObj),
     logo: _getImageUrl(collectionObj),
+    banner: _getBannerImageUrl(collectionObj),
+    owner: _getPrimaryOwner(collectionObj),
+    verified: _isVerified(collectionObj),
   };
 };
 
@@ -41,6 +40,14 @@ function _getName(collectionObj) {
 function _getContractAddress(collectionObj) {
   try {
     return collectionObj.primary_asset_contracts[0].address;
+  } catch (err) {
+    return null;
+  }
+}
+
+function _getPrimaryOwner(collectionObj) {
+  try {
+    return collectionObj.primary_asset_contracts[0].owner;
   } catch (err) {
     return null;
   }
