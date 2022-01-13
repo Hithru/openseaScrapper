@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fe1e3312-d8dc-4b3d-9368-ad68d5f1128f",
+    "collection": "295ddab5-a6f2-489c-a254-38d34be49bfb",
+    "type": "AUDIO",
+    "status": "ISSUED",
+    "name": "AmbieNFT #035 - 0x694db262811638de",
+    "description": "**AmbieNFT: Hash driven, human patched, hardware synthesized.**\n\n**#035:** 0x694db262811638de This is the thirty-fifth AmbieNFT composition in a collection of 256 individually minted, single-edition generative music NFTs combining hash derived compositional rules with hardware based modular synthesis for unprecedented generative musicality. These compositions are carefully curated, captured and minted in the experienced hands of ambient sound designer and crypto-music early adopter, @drum_operator.\n\nCV-responsive video synthesis background captured live during recording via Sleepy Circuits Hypno.\n\nPurchase of an AmbieNFT conveys rights in totality for all use cases. Visit https://ambienft.com for more information.",
+    "image": "https://lh3.googleusercontent.com/P-FNepDgXkXao2SiOgxgvAHHGSOhfSzAlmz6yPdfZN689Mkna91mmSr3Fan3INKGmkkVos7FOdW0cQjan_htcREiyyzkp-lpgWeDOA",
+    "contract": {
+      "blockchain": "ETHEREUM",
+      "address": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "type": "ERC1155"
+    },
+    "token": {
+      "id": "100207734995273177975544027187136290572129187829540288968629664421296688070657",
+      "url": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/100207734995273177975544027187136290572129187829540288968629664421296688070657"
+    }
+  },
+  {
+    "id": "a9c97c82-3cac-412c-ac36-fb0b2dc44e4f",
+    "collection": "295ddab5-a6f2-489c-a254-38d34be49bfb",
+    "type": "AUDIO",
+    "status": "ISSUED",
+    "name": "AmbieNFT #034 - 0xa885faa424b87cfb",
+    "description": "**AmbieNFT: Hash driven, human patched, hardware synthesized.**\n\n**#034:** 0xa885faa424b87cfb This is the thirty-fourth AmbieNFT composition in a collection of 256 individually minted, single-edition generative music NFTs combining hash derived compositional rules with hardware based modular synthesis for unprecedented generative musicality. These compositions are carefully curated, captured and minted in the experienced hands of ambient sound designer and crypto-music early adopter, @drum_operator.\n\nCV-responsive video synthesis background captured live during recording via Sleepy Circuits Hypno.\n\nPurchase of an AmbieNFT conveys rights in totality for all use cases. Visit https://ambienft.com for more information.",
+    "image": "https://lh3.googleusercontent.com/w40QkGwXSCyzEE-uQPSTNJP9TraBjMVk8X43HaGA8l2cBomtHCYzDfEOfG1L8a7EtUH17UgQ0O4ZqoDruiZJzLHtt-IHuLp-rnUwQg",
+    "contract": {
+      "blockchain": "ETHEREUM",
+      "address": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "type": "ERC1155"
+    },
+    "token": {
+      "id": "100207734995273177975544027187136290572129187829540288968629664420197176442881",
+      "url": "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/100207734995273177975544027187136290572129187829540288968629664420197176442881"
+    }
+  }
+]
