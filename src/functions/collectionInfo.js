@@ -7,6 +7,7 @@ const axios = require("axios");
 const collectionInfo = async (slug) => {
   const response = await axios.get(`https://api.opensea.io/collection/${slug}`);
   const collectionObj = response.data.collection;
+  console.log(collectionObj);
   //   console.log("Unedited data");
   //   console.log(response);
   //   console.log(response.data.collection);

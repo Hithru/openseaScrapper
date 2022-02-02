@@ -36,25 +36,28 @@ const slugDict = {
     );
     console.log(collectionInfo);
 
-    console.log(`\n\n\n\n✅ === OpenseaScraper.assetsInfo(slug) ===`);
-    let assetsInfo = await OpenseaScraper.assetInfo(slug, collectionID, val[1]);
-    for (const asset of assetsInfo) {
-      finalAsset.push(asset);
-    }
-    let dataAssets = JSON.stringify(assetsInfo);
-    fs.writeFileSync(
-      path.resolve("./data-assets", `${slug}-assets.json`),
-      dataAssets
-    );
-    console.log(assetsInfo);
+    // console.log(`\n\n\n\n✅ === OpenseaScraper.assetsInfo(slug) ===`);
+    // let assetsInfo = await OpenseaScraper.assetInfo(slug, collectionID, val[1]);
+    // for (const asset of assetsInfo) {
+    //   finalAsset.push(asset);
+    // }
+    // let dataAssets = JSON.stringify(assetsInfo);
+    // fs.writeFileSync(
+    //   path.resolve("./data-assets", `${slug}-assets.json`),
+    //   dataAssets
+    // );
+    // console.log(assetsInfo);
   }
 
   console.log(finalCollections.length);
   let collec = JSON.stringify(finalCollections);
-  fs.writeFileSync(`collections.json`, collec);
+  fs.writeFileSync(
+    path.resolve("./data-collections", `collections.json`),
+    collec
+  );
 
-  console.log(finalAsset.length);
-  let asset = JSON.stringify(finalAsset);
-  fs.writeFileSync(`asset.json`, asset);
+  // console.log(finalAsset.length);
+  // let asset = JSON.stringify(finalAsset);
+  // fs.writeFileSync(path.resolve("./data-assets", `assets.json`), asset);
   console.log("\n🎉 DEMO ENDED 🥳");
 })();

@@ -55,9 +55,7 @@ function pushToCollectionTable() {
 function pushToAssetTable() {
   var asset = {},
     count = 1,
-    asset_formatted_arr1 = [],
-    asset_formatted_arr2 = [],
-    asset_formatted_arr3 = [],
+    asset_formatted_arr = []
     params = {};
 
   var Asset_DATA_ARR = require("./asset.json");
@@ -103,37 +101,33 @@ function pushToAssetTable() {
         },
       },
     };
-    if (count <= 24) {
-      asset_formatted_arr1.push(asset);
-    } else if (count <= 48) {
-      asset_formatted_arr2.push(asset);
-    } else {
-      asset_formatted_arr3.push(asset);
-    }
+
+    asset_formatted_arr.push(asset);
     count += 1;
+    if (count === 25) {
+      params = {
+        RequestItems: {
+          "p8-nftdev2-asset-test": asset_formatted_arr.reverse(),
+        },
+      };
+      DDB.batchWriteItem(params).promise();
+      asset_formatted_arr = []
+      count = 0;
+    } 
+
 
     // console.log(Asset_DATA_ARR[i_int].token);
   }
-  params1 = {
+  params = {
     RequestItems: {
-      "p8-nftdev2-asset-test": asset_formatted_arr1.reverse(),
+      "p8-nftdev2-asset-test": asset_formatted_arr.reverse(),
     },
   };
-  params2 = {
-    RequestItems: {
-      "p8-nftdev2-asset-test": asset_formatted_arr2.reverse(),
-    },
-  };
-  params3 = {
-    RequestItems: {
-      "p8-nftdev2-asset-test": asset_formatted_arr3.reverse(),
-    },
-  };
+
+
   //   return asset_formatted_arr[0].PutRequest.Item.tok;
-  console.log(asset_formatted_arr1.length);
-  DDB.batchWriteItem(params2).promise();
-  DDB.batchWriteItem(params3).promise();
-  return DDB.batchWriteItem(params1).promise();
+  console.log(asset_formatted_arr.length);
+  return DDB.batchWriteItem(params).promise();
 }
 
 (async function seed() {
